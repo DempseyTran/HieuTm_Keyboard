@@ -1,0 +1,113 @@
+/* Cấu hình chung */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    font-style: italic;
+    color: #d81111;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.keyboard {
+    display: -ms-grid;
+    gap: 1px; /* Giảm khoảng cách giữa các phím để chúng khít viền */
+    background-color: #ccc; /* Màu nền cho bàn phím */
+    padding: 1px; /* Thêm padding nhỏ xung quanh bàn phím để khít viền */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(176, 8, 8, 0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    flex: 1; /* Đảm bảo các phím chiếm không gian đều trên mỗi hàng */
+    padding: 15px 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #d81111; /* Màu viền nhẹ */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.1s;
+}
+
+.key:hover {
+    background-color: #67c9e3;
+    box-shadow: 0 0 5px rgba(215, 8, 8, 0.2);
+}
+
+.key.space {
+    flex: 0 0 150px; /* Chiều rộng cố định cho phím Space */
+}
+
+.key.backspace, .key.tab, .key.capslock, .key.enter, .key.shift-left, .key.shift-right {
+    flex: 0 0 30px; /* Chiều rộng cố định cho các phím đặc biệt */
+}
+
+.key.ctrl, .key.alt, .key.win, .key.fn {
+    flex: 0 0 45px;
+}
+.key.left-arrow, .key.right-arrow {
+    flex: 0 0 20px; /* Chiều rộng cố định cho các phím mũi tên */
+}
+.arrow-keys {
+    background-color: #fff;
+    border: 1px solid white; /* Màu viền nhẹ */
+    border-radius: 5px;
+    position: relative; /* Thiết lập div chứa nút có vị trí tương đối */
+    width: 40px; /* Chiều rộng của div */
+    height: 50px; /* Chiều cao của div */
+}
+
+.key.shift-left, .key.shift-right {
+    flex: 0 0 80px; /* Chiều rộng cố định cho các phím Shift */
+}
+
+
+
+/* css riêng cho 2 nút lên xuống */
+.arrow {
+    position: absolute; /* Các phím mũi tên sẽ được đặt tuyệt đối trong div */
+    width: 100%; /* Chiều rộng của mỗi phím bằng với div */
+    height: 50%; /* Chiều cao của mỗi phím là một nửa div */
+    background-color: #fff; /* Màu nền của phím */
+    border: 1px solid #bbb; /* Viền của phím */
+    cursor: pointer; /* Cho biết có thể nhấp vào phím */
+    display: flex; /* Cho phép canh giữa nội dung trong phím */
+    align-items: center; /* Canh giữa nội dung theo chiều dọc */
+    justify-content: center; /* Canh giữa nội dung theo chiều ngang */
+}
+.up-arrow {
+    top: 0; /* Đặt phím mũi tên lên ở phía trên cùng của div */
+    border: 0.5px solid #d81111; /* Màu viền nhẹ */
+    border-radius: 3px;
+}
+.up-arrow:hover {
+    background-color: #67c9e3;
+    box-shadow: 0 0 5px rgba(215, 8, 8, 0.2);
+}
+
+.down-arrow {
+    bottom: 0; /* Đặt phím mũi tên xuống ở phía dưới cùng của div */
+    border: 0.5px solid #d81111; /* Màu viền nhẹ */
+    border-radius: 3px;
+}
+.down-arrow:hover{
+    background-color: #67c9e3;
+    box-shadow: 0 0 5px rgba(215, 8, 8, 0.2);
+}
+
